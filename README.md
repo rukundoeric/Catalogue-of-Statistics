@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-[![Build Status](https://travis-ci.com/rukundoeric/bookstore.svg?branch=milestone-1)](https://travis-ci.com/rukundoeric/bookstore)
+[![Build Status](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics.svg?branch=feature)](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics)
 
 # Meals-Bo
 Bookstore app. this is front-end of an application that will help Magic-books Inc. organize and manage their bookstore.

@@ -1,12 +1,21 @@
+/* istanbul ignore file */
 import React from 'react';
+import {
+  Route,
+  BrowserRouter,
+  Switch,
+} from 'react-router-dom';
+import Home from './pages/Home';
+import Meal from './pages/Meal';
 import '../assets/css/style.css';
 
-function App() {
-  return (
-    <div className="content">
-      <h1>Hi here!</h1>
-    </div>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/meal" component={Meal} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;

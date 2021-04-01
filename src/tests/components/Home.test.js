@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render, cleanup } from '@testing-library/react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from '../../components/App';
+import Home from '../../components/pages/Home';
 import rootReducer from '../../redux/reducers';
 
 afterEach(cleanup);
@@ -19,6 +19,6 @@ const Wrapper = ({ children }) => (
 );
 
 it('Should match snapshot', () => {
-  const { asFragment } = render(<App />, { wrapper: Wrapper });
-  expect(asFragment(<App />)).toMatchSnapshot();
+  const { asFragment } = render(<Home />, { wrapper: Wrapper });
+  expect(asFragment(<Home />)).toMatchSnapshot();
 });
