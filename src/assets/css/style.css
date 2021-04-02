@@ -59,7 +59,7 @@
     opacity: 1;
   }
   0% {
-    margin-left: 0px;
+    margin-left: 0;
     opacity: 0;
   }
 }

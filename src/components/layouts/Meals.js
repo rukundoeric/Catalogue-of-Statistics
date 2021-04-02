@@ -2,10 +2,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 import key from 'uniqid';
+import PropTypes from 'prop-types';
 import Filter from './Filter';
 import Meal from '../items/Meal';
+import { MealsPL } from '../placeholder';
 
-const Meals = () => (
+const Meals = ({ mealsList }) => (
   <section className="u-clearfix u-section-2" id="sec-b0f8">
     <div className="u-clearfix u-sheet u-sheet-1 meals-container">
       <div id="scroll-to-top" className="mouse d-flex justify-content-center align-items-center">
@@ -21,7 +23,9 @@ const Meals = () => (
           <div className="u-layout-col">
             <div className="u-size-30">
               <div className="u-layout-row">
-                {[1, 2, 3].map(() => (<Meal key={key()} />))}
+                {mealsList ? (
+                  mealsList.map(meal => (<Meal key={key()} meal={meal} />))
+                ) : (<MealsPL />)}
               </div>
             </div>
           </div>
@@ -30,5 +34,9 @@ const Meals = () => (
     </div>
   </section>
 );
+
+Meals.propTypes = {
+  mealsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
 
 export default Meals;

@@ -1,13 +1,19 @@
 import React from 'react';
-import image from '../../assets/images/658db1c75e62e3d1d939ffadc424a7ae.jpeg';
+import PropTypes from 'prop-types';
 
-const Meal = () => (
+const Meal = ({ meal }) => (
   <div
     className="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1 item"
-    style={{ backgroundImage: `url(${image})` }}
+    style={{ backgroundImage: `url(${meal.strMealThumb})` }}
   >
     <div className="u-container-layout" />
   </div>
 );
+
+Meal.propTypes = {
+  meal: PropTypes.shape({
+    strMealThumb: PropTypes.string,
+  }).isRequired,
+};
 
 export default Meal;

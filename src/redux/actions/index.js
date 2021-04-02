@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { randomMeal, categories } from './_api';
+import { randomMeal, categories, search } from './_api';
 
 export const getRandomMeal = () => async dispatch => {
   const { data: { meals } } = await axios.get(randomMeal);
@@ -14,5 +14,13 @@ export const getCategories = () => async dispatch => {
   dispatch({
     type: 'GET_CATEGORIES',
     payload,
+  });
+};
+
+export const getMeals = (query = 'a') => async dispatch => {
+  const { data: { meals } } = await axios.get(search(query));
+  dispatch({
+    type: 'GET_MEALS',
+    payload: meals.slice(0, 9),
   });
 };

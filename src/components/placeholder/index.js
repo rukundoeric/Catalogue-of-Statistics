@@ -15,7 +15,7 @@ export const BannerPL = () => (
   </Placeholder>
 );
 
-export const ListPL = () => (
+export const MealsPL = () => (
   <Placeholder>
     <Placeholder.Header image>
       <Placeholder.Line />
