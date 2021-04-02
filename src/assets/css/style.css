@@ -66,9 +66,6 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-.u-section-1 {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../images/1ea150a80b55b574e9ed5ca2338302fa.jpeg");
   background-position: 50% 50%;
 }
@@ -174,13 +171,13 @@ body {
   left: 0;
   right: 0;
   top: -35px;
-  z-index: 3 !important;
+  z-index: 3;
 }
 
 .fix-mouse {
-  position: fixed !important;
+  position: fixed;
   top: 0;
-  z-index: 6 !important;
+  z-index: 6;
   margin-top: 50px;
 }
 
@@ -211,11 +208,18 @@ body {
 .mouse-wheel span {
   font-size: 24px;
   position: relative;
-  bottom: 0 !important;
+  bottom: 0;
 }
 
 .item {
+  opacity: 0.7;
   cursor: pointer;
+}
+.item:hover {
+  border: 10px solid #dfc38f !important;
+  transform: scale(0.9);
+  border-radius: 15px;
+  opacity: 1;
 }
 
 .meals-container {
@@ -490,10 +494,6 @@ body {
     margin-left: initial;
   }
 
-  .u-section-3 .u-image-1 {
-    min-height: 250px;
-  }
-
   .u-section-3 .u-layout-cell-2 {
     min-height: 250px;
   }
@@ -528,10 +528,6 @@ body {
 @media (max-width: 575px) {
   .u-section-3 .u-sheet-1 {
     min-height: 488px;
-  }
-
-  .u-section-3 .u-image-1 {
-    min-height: 226px;
   }
 
   .u-section-3 .u-layout-cell-2 {
@@ -578,35 +574,6 @@ body {
 
 .u-section-4 .u-layout-wrap-1 {
   margin: 0 auto 0 0;
-}
-
-.u-section-4 .u-image-1 {
-  min-height: 739px;
-  background-image: url("../images/121de0006b4b7c60c37dc95d75299cb3.jpeg");
-  background-position: 50% 50%;
-}
-
-.u-section-4 .u-layout-cell-2 {
-  min-height: 739px;
-}
-
-.u-section-4 .u-container-layout-2 {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
-.u-section-4 .u-text-1 {
-  margin: 75px 0 0;
-}
-
-.u-section-4 .u-text-2 {
-  margin: 20px 0 0;
-}
-
-.u-section-4 .u-btn-1 {
-  border-style: solid;
-  border-radius: 50px;
-  margin: 30px 0 75px;
 }
 
 @media (max-width: 1199px) {
@@ -715,6 +682,15 @@ body {
   .meals-container {
     margin-top: -20px;
   }
+}
+.mealInfo {
+  position: absolute;
+  z-index: 20;
+  left: 200px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px #eeeeee;
 }
 
 /*# sourceMappingURL=style.css.map */

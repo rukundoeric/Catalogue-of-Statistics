@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Banner from '../layouts/Banner';
 import Meals from '../layouts/Meals';
+import MealInfo from '../layouts/MealInfo';
 import { getCategories, getRandomMeal, getMeals } from '../../redux/actions';
 
 const Home = ({
@@ -25,6 +26,7 @@ const Home = ({
   return (
     <div>
       <Banner randomMeal={randomMeal} />
+      <MealInfo meal={randomMeal} />
       <Meals categories={categories} mealsList={mealsList} />
     </div>
   );
