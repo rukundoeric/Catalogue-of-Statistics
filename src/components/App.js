@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from './pages/Home';
 import Meal from './pages/Meal';
+import '../assets/css/nicepage.css';
 import '../assets/css/style.css';
 
 const App = () => (

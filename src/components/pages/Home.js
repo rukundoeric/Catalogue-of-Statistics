@@ -1,8 +1,11 @@
 import React from 'react';
+import Banner from '../layouts/Banner';
+import Meals from '../layouts/Meals';
 
 const Home = () => (
   <div>
-    <h1>Home</h1>
+    <Banner />
+    <Meals />
   </div>
 );
 
