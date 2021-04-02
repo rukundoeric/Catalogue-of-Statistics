@@ -12,7 +12,7 @@ const Home = ({
   randomMeal: rMeal,
 }) => {
   const [categories, setCategories] = useState([]);
-  const [randomMeal, setRandomMeal] = useState({});
+  const [randomMeal, setRandomMeal] = useState(undefined);
 
   useEffect(() => { getCategories(); getRandomMeal(); }, []);
   useEffect(() => { setCategories(catList); }, [catList]);

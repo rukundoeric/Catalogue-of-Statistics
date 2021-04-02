@@ -1,3 +1,68 @@
+@-webkit-keyframes wheel-up-down {
+  100% {
+    margin-top: 34px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+}
+@-moz-keyframes wheel-up-down {
+  100% {
+    margin-top: 34px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+}
+@keyframes wheel-up-down {
+  100% {
+    margin-top: 34px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  0% {
+    margin-top: 2px;
+    opacity: 0;
+  }
+}
+@keyframes wheel-up-down-1 {
+  100% {
+    margin-top: 40px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  0% {
+    margin-top: 30px;
+    opacity: 0;
+  }
+}
+@keyframes wheel-left-right {
+  100% {
+    margin-left: 40px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  0% {
+    margin-left: 0px;
+    opacity: 0;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -103,13 +168,59 @@ body {
     font-size: 3rem;
   }
 }
+.mouse {
+  height: 80px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -35px;
+  z-index: 3 !important;
+}
+
+.fix-mouse {
+  position: fixed !important;
+  top: 0;
+  z-index: 6 !important;
+  margin-top: 50px;
+}
+
+.mouse-icon {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 0 10px #d6cece;
+}
+
+.mouse-wheel {
+  height: 80px;
+  margin: 35px auto 0;
+  display: block;
+  width: 30px;
+  background: transparent;
+  -webkit-animation: 1.6s ease infinite wheel-up-down;
+  -moz-animation: 1.6s ease infinite wheel-up-down;
+  animation: 1.6s ease infinite wheel-up-down;
+  color: #dfc274;
+}
+.mouse-wheel span {
+  font-size: 24px;
+  position: relative;
+  bottom: 0 !important;
+}
+
 .item {
   cursor: pointer;
 }
 
 .meals-container {
-  margin-top: -200px;
-  background-color: rgba(255, 255, 255, 0.644);
+  margin-top: -100px;
+  background-color: #fafafa;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   padding: 30px;
@@ -598,6 +709,11 @@ body {
 
   .u-section-4 .u-btn-1 {
     width: 71px;
+  }
+}
+@media (max-width: 768px) {
+  .meals-container {
+    margin-top: -20px;
   }
 }
 
