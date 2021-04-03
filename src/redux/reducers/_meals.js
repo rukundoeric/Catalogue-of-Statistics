@@ -1,4 +1,9 @@
-export default (state = {}, action) => {
+const initialState = {
+  randomMeal: {},
+  mealsList: [],
+};
+
+export default (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {

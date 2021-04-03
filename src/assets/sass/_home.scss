@@ -640,9 +640,11 @@
 }
 
 .mealInfo {
-  position: absolute;
-  z-index: 20;
-  left: 200px;
+  display: none;
+  position: fixed;
+  left: 100px;
+  top: 200px;
+  z-index: 1000;
   width: 400px;
   border-radius: 10px;
   background-color: white;
