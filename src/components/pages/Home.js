@@ -25,7 +25,7 @@ const Home = ({
   useEffect(() => { setMealsList(mList); }, [mList]);
 
   return (
-    <div>
+    <div className="home">
       <Banner randomMeal={randomMeal} />
       <Meals categories={categories} mealsList={mealsList} />
     </div>

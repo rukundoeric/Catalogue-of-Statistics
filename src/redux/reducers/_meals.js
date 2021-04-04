@@ -1,5 +1,6 @@
 const initialState = {
   randomMeal: {},
+  mealDetails: {},
   mealsList: [],
 };
 

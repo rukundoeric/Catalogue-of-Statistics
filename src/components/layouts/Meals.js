@@ -1,10 +1,7 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import _ from 'lodash';
 import key from 'uniqid';
 import PropTypes from 'prop-types';
-import { $ } from 'jquery';
 import Filter from './Filter';
 import Meal from '../items/Meal';
 import MealInfo from './MealInfo';
@@ -15,19 +12,19 @@ const Meals = ({ mealsList, categories }) => {
 
   const position = (clientX, clientY) => {
     const mW = 400;
-    const mH = 320;
-    const sW = screen.width;
-    const sH = screen.height;
+    const mH = 350;
+    const sW = window.screen.width;
+    const sH = window.screen.height;
     return {
       x: (sW - clientX) < mW ? clientX - mW : clientX,
-      y: (sH - clientY) < mH ? clientY - mH : clientY,
+      y: (sH - clientY) < mH ? clientY - (mH - 100) : clientY,
     };
   };
 
   const handleShowInfo = (e, id) => {
     setCurrrentMeal(_.find(mealsList, ({ idMeal }) => idMeal === id));
     document.querySelector('#mealInfo').style.display = 'block';
-    if (screen.width > 768) {
+    if (window.screen.width > 768) {
       const pos = position(e.clientX, e.clientY);
       document.querySelector('#mealInfo').style.left = `${pos.x}px`;
       document.querySelector('#mealInfo').style.top = `${pos.y}px`;
@@ -36,6 +33,11 @@ const Meals = ({ mealsList, categories }) => {
       document.querySelector('#mealInfo').style.height = '100vh';
     }
   };
+
+  const handleGoToList = () => {
+    window.scrollTo(0, 600);
+  };
+
   const handleCloseInfo = () => {
     document.querySelector('#mealInfo').style.display = 'none';
   };
@@ -44,11 +46,14 @@ const Meals = ({ mealsList, categories }) => {
     <section className="u-clearfix u-section-2" id="sec-b0f8">
       <div className="u-clearfix u-sheet u-sheet-1 meals-container">
         <div id="scroll-to-top" className="mouse d-flex justify-content-center align-items-center">
-          <div className="mouse-icon">
+          <buttton
+            onClick={handleGoToList}
+            className="mouse-icon"
+          >
             <div className="mouse-wheel">
               <span className="fa fa-chevron-down" />
             </div>
-          </div>
+          </buttton>
         </div>
         <Filter categories={categories} />
         <div

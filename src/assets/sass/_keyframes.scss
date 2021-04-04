@@ -64,7 +64,8 @@
 
 @keyframes wheel-left-right {
   100% {
-    margin-left: 40px;
+    margin-left: 0;
+    margin-right: 10px;
     opacity: 1;
   }
 
@@ -73,7 +74,7 @@
   }
 
   0% {
-    margin-left: 0;
-    opacity: 0;
+    margin-left: 10px;
+    opacity: 1;
   }
 }
