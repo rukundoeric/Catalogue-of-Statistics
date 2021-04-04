@@ -6,14 +6,13 @@ import Banner from '../layouts/Banner';
 import Meals from '../layouts/Meals';
 
 import {
-  getCategories, getRandomMeal, getMeals, filterByCategory,
+  getCategories, getRandomMeal, getMeals,
 } from '../../redux/actions';
 
 const Home = ({
   getCategories,
   getRandomMeal,
   getMeals,
-  filterByCategory,
   categories: catList,
   randomMeal: rMeal,
   mealsList: mList,
@@ -42,7 +41,7 @@ const Home = ({
     if (value === 'Select category') { params.delete('category'); }
     history.push({ search: params.toString() });
     setcCategory(value);
-    filterByCategory(value);
+    getMeals(value);
   };
 
   return (
@@ -63,7 +62,6 @@ Home.propTypes = {
   getRandomMeal: PropTypes.func.isRequired,
   getCategories: PropTypes.func.isRequired,
   getMeals: PropTypes.func.isRequired,
-  filterByCategory: PropTypes.func.isRequired,
   categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   randomMeal: PropTypes.shape({}).isRequired,
   mealsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
@@ -79,7 +77,6 @@ const mapDispatchToProps = {
   getRandomMeal,
   getCategories,
   getMeals,
-  filterByCategory,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

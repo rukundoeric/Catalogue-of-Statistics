@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { BannerPL } from '../placeholder';
+import { MealsPL } from '../placeholder';
 
 const MealInfo = ({
   meal: {
@@ -25,7 +25,7 @@ const MealInfo = ({
           Read more
         </Link>
       </div>
-    ) : (<BannerPL />)}
+    ) : (<MealsPL />)}
   </div>
 );
 

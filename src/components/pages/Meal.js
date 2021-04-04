@@ -9,7 +9,10 @@ import { getMealDetails } from '../../redux/actions';
 import Ingredient from '../items/Ingredient';
 
 const Meal = ({ mealDetails, getMealDetails, match: { params: { id } } }) => {
-  useEffect(() => { getMealDetails(id); }, []);
+  useEffect(() => {
+    getMealDetails(id);
+    window.scrollTo(0, 0);
+  }, []);
 
   const { strMeal, strInstructions, strMealThumb } = mealDetails;
   const Ingredients = _.compact(
