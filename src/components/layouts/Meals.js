@@ -7,7 +7,9 @@ import Meal from '../items/Meal';
 import MealInfo from './MealInfo';
 import { MealsPL } from '../placeholder';
 
-const Meals = ({ mealsList, categories }) => {
+const Meals = ({
+  handleSearch, handleFilterCategory, mealsList, categories, cCategory,
+}) => {
   const [currentMeal, setCurrrentMeal] = useState(undefined);
 
   const position = (clientX, clientY) => {
@@ -55,7 +57,12 @@ const Meals = ({ mealsList, categories }) => {
             </div>
           </buttton>
         </div>
-        <Filter categories={categories} />
+        <Filter
+          handleSearch={handleSearch}
+          handleFilterCategory={handleFilterCategory}
+          categories={categories}
+          cCategory={cCategory}
+        />
         <div
           onMouseLeave={handleCloseInfo}
           className="mt-3 u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1"
@@ -86,8 +93,11 @@ const Meals = ({ mealsList, categories }) => {
 };
 
 Meals.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  handleFilterCategory: PropTypes.func.isRequired,
   mealsList: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  cCategory: PropTypes.string.isRequired,
 };
 
 export default Meals;

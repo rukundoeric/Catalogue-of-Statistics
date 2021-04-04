@@ -9,6 +9,7 @@ export default (state = initialState, action) => {
 
   switch (type) {
     case 'GET_MEALS':
+    case 'FILTER_MEALS_BY_CATEGORIES':
       return {
         ...state,
         mealsList: payload,

@@ -2,7 +2,7 @@ import axios from 'axios';
 import r from 'randomstring';
 
 import {
-  randomMeal, categories, search, mealDetails,
+  randomMeal, categories, search, mealDetails, filter,
 } from './_api';
 
 export const getRandomMeal = () => async dispatch => {
@@ -21,11 +21,19 @@ export const getCategories = () => async dispatch => {
   });
 };
 
-export const getMeals = (query = r.generate(1)) => async dispatch => {
+export const getMeals = (query = r.generate(1) || 'a') => async dispatch => {
   const { data: { meals } } = await axios.get(search(query));
   dispatch({
     type: 'GET_MEALS',
-    payload: meals.slice(0, 9),
+    payload: meals ? meals.slice(0, 9) : [],
+  });
+};
+
+export const filterByCategory = category => async dispatch => {
+  const { data: { meals } } = await axios.get(filter(category));
+  dispatch({
+    type: 'FILTER_MEALS_BY_CATEGORIES',
+    payload: meals ? meals.slice(0, 9) : [],
   });
 };
 
