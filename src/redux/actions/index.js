@@ -1,5 +1,4 @@
 import axios from 'axios';
-import r from 'randomstring';
 
 import {
   randomMeal, categories, search, mealDetails, filter,
@@ -21,7 +20,7 @@ export const getCategories = () => async dispatch => {
   });
 };
 
-export const getMeals = (query = r.generate(1) || 'a') => async dispatch => {
+export const getMeals = (query = 'a') => async dispatch => {
   const { data: { meals } } = await axios.get(search(query));
   dispatch({
     type: 'GET_MEALS',

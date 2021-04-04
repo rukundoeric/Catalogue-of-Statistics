@@ -762,5 +762,54 @@ body {
     transform: rotate(0);
   }
 }
+.banner-pl .div-1,
+.banner-pl .div-2,
+.banner-pl .div-3 {
+  background-color: #e6e6e6;
+  border-radius: 20px;
+}
+.banner-pl .div-1 {
+  width: 300px;
+  height: 60px;
+}
+.banner-pl .div-2 {
+  width: 450px;
+  height: 100px;
+}
+.banner-pl .div-3 {
+  width: 200px;
+  height: 60px;
+}
+
+.mealDetailsPL .div-1,
+.mealDetailsPL .div-2,
+.mealDetailsPL .div-3,
+.mealDetailsPL .div-4,
+.mealDetailsPL .div-5 {
+  background-color: #ececec;
+  border-radius: 20px;
+}
+.mealDetailsPL .div-1 {
+  width: 300px;
+  height: 100px;
+}
+.mealDetailsPL .div-2 {
+  width: 500px;
+  height: 400px;
+}
+.mealDetailsPL .div-3 {
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin-right: 50px;
+}
+.mealDetailsPL .div-4 {
+  width: 200px;
+  height: 100px;
+}
+.mealDetailsPL .div-5 {
+  width: 400px;
+  height: 100px;
+}
 
 /*# sourceMappingURL=style.css.map */

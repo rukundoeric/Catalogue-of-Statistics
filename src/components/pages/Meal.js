@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import key from 'uniqid';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { BannerPL } from '../placeholder';
+import { MealDetailsPL } from '../placeholder';
 import { getMealDetails } from '../../redux/actions';
 import Ingredient from '../items/Ingredient';
 
@@ -12,7 +12,7 @@ const Meal = ({ mealDetails, getMealDetails, match: { params: { id } } }) => {
   useEffect(() => { getMealDetails(id); }, []);
 
   const { strMeal, strInstructions, strMealThumb } = mealDetails;
-  const Ingrdients = _.compact(
+  const Ingredients = _.compact(
     _.filter(_.keys(mealDetails), v => v.startsWith('strIngredient'))
       .map(v => mealDetails[v]),
   );
@@ -47,12 +47,12 @@ const Meal = ({ mealDetails, getMealDetails, match: { params: { id } } }) => {
               <div className="ml-3">
                 <h6 className="mt-5 u-custom-font u-font-oswald u-text u-text-palette-3-base">Ingredients</h6>
                 <div className="d-flex flex-wrap">
-                  { Ingrdients.map(v => (<Ingredient key={key()} value={v} />)) }
+                  { Ingredients.map(v => (<Ingredient key={key()} value={v} />)) }
                 </div>
               </div>
             </div>
           </div>
-        ) : (<BannerPL />)}
+        ) : (<MealDetailsPL />)}
       </div>
     </section>
   );
