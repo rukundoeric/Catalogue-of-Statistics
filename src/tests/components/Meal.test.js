@@ -9,8 +9,14 @@ import rootReducer from '../../redux/reducers';
 afterEach(cleanup);
 
 const initialState = {
-  meals: [],
+  randomMeal: {},
+  mealDetails: {},
+  mealsList: [],
 };
+
+jest.mock('https://www.themealdb.com/api/json/v1/1/search.php?s=34343', () => ({
+  getMealDetails: () => ({ idMail: 'id', strMeal: 'eric', strInstructions: 'ededd' }),
+}));
 
 const store = createStore(rootReducer, initialState);
 
