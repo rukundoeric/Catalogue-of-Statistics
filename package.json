@@ -29,7 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "tests": "react-scripts test",
-    "test": "yarn run tests -- --coverage --watchAll=false --silent",
+    "test": "yarn run tests --watchAll=false --silent",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/assets/sass/main.scss:src/assets/css/style.css"
   },
