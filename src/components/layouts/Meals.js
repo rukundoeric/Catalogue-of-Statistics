@@ -45,7 +45,7 @@ const Meals = ({
   };
 
   return (
-    <section className="mt-md-5 u-clearfix u-section-2" id="sec-b0f8">
+    <section className="mt-lg-0 mt-md-5 u-clearfix u-section-2" id="sec-b0f8">
       <div className="u-clearfix u-sheet u-sheet-1 meals-container">
         <div id="scroll-to-top" className="mouse d-flex justify-content-center align-items-center">
           <buttton
