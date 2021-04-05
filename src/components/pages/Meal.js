@@ -35,8 +35,8 @@ const Meal = ({ mealDetails, getMealDetails, match: { params: { id } } }) => {
                     <i className="fa fa-chevron-left" />
                   </span>
                 </Link>
-                <h1 className="mt-5 u-custom-font u-font-oswald u-text u-text-palette-3-base u-title u-text-1">{strMeal}</h1>
-                <p className="u-large-text u-text u-text-grey-50 u-text-variant u-text-2">{strInstructions}</p>
+                <h1 data-testid="meal-name" className="mt-5 u-custom-font u-font-oswald u-text u-text-palette-3-base u-title u-text-1">{strMeal}</h1>
+                <p data-testid="meal-instruction" className="u-large-text u-text u-text-grey-50 u-text-variant u-text-2">{strInstructions}</p>
               </div>
             </div>
             <div className="col-lg-6 col-sm-12">

@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics.svg?branch=feature)](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics)
 
 # Meals-Bo
-Bookstore app. this is front-end of an application that will help Magic-books Inc. organize and manage their bookstore.
+Do you want to learn how to cook any kind of food? Then Meals-Bo is the perfect answer for you. With this platform, users can search and filter food from different regions and learn how to cook them.
 
 ## Built With
 

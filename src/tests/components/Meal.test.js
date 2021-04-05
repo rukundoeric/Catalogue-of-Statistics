@@ -1,30 +1,44 @@
-/* eslint-disable react/prop-types */
 import '@testing-library/jest-dom';
-import { render, cleanup } from '@testing-library/react';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { screen, waitFor } from '@testing-library/react';
 import Meal from '../../components/pages/Meal';
-import rootReducer from '../../redux/reducers';
+import Render from '../helpers/Render';
 
-afterEach(cleanup);
-
-const initialState = {
-  randomMeal: {},
-  mealDetails: {},
-  mealsList: [],
+const state = {
+  initialState: {
+    meals: {
+      randomMeal: {},
+      mealDetails: {
+        strMeal: 'ab',
+        strInstructions: 'bc',
+        strIngredient1: 'a',
+        strIngredient2: 'a',
+        strIngredient3: '',
+      },
+      mealsList: [],
+    },
+  },
 };
 
-jest.mock('https://www.themealdb.com/api/json/v1/1/search.php?s=34343', () => ({
-  getMealDetails: () => ({ idMail: 'id', strMeal: 'eric', strInstructions: 'ededd' }),
-}));
+const props = {
+  match: {
+    params: {
+      id: '1',
+    },
+  },
+};
 
-const store = createStore(rootReducer, initialState);
+describe('Meal Details :', () => {
+  it('Should render Meal Details', async () => {
+    Render(
+      <BrowserRouter>
+        <Meal match={props.match} />
+      </BrowserRouter>, { ...state },
+    );
 
-const Wrapper = ({ children }) => (
-  <Provider store={store}>{children}</Provider>
-);
+    await waitFor(() => screen.getByTestId('meal-name'));
 
-it('Should match snapshot', () => {
-  const { asFragment } = render(<Meal />, { wrapper: Wrapper });
-  expect(asFragment(<Meal />)).toMatchSnapshot();
+    expect(screen.getByTestId('meal-name')).toHaveTextContent('ab');
+    expect(screen.getByTestId('meal-instruction')).toHaveTextContent('bc');
+  });
 });

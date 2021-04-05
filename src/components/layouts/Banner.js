@@ -10,8 +10,8 @@ const Banner = ({ randomMeal: { idMeal, strMeal, strInstructions } }) => (
         <div className="u-container-layout u-valign-middle u-container-layout-1">
           {strMeal && strInstructions ? (
             <div>
-              <h1 className="u-custom-font u-font-oswald u-text u-text-palette-3-base u-title u-text-1">{strMeal.substring(0, 30)}</h1>
-              <p className="u-large-text u-text u-text-grey-50 u-text-variant u-text-2">{`${strInstructions.substring(0, 220)}...`}</p>
+              <h1 data-testid="meal-name" className="u-custom-font u-font-oswald u-text u-text-palette-3-base u-title u-text-1">{strMeal.substring(0, 30)}</h1>
+              <p data-testid="meal-instruction" className="u-large-text u-text u-text-grey-50 u-text-variant u-text-2">{`${strInstructions.substring(0, 220)}...`}</p>
               <Link
                 to={`/meal/${idMeal}`}
                 className="u-border-2 u-border-palette-3-base u-btn u-btn-round u-button-style u-radius-50 u-text-grey-50"
