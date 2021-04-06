@@ -1,6 +1,26 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
+[![Build Status](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics.svg?branch=feature)](https://travis-ci.com/rukundoeric/Catalogue-of-Statistics)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Meals-Bo
+Do you want to learn how to cook any kind of food? Then Meals-Bo is the perfect answer for you. With this platform, users can search and filter food from different regions and learn how to cook them.
+
+## Built With
+
+- React.js
+- SASS and CSS
+- Creat-React-App
+- Redux
+
+## Live Demo
+
+[Live Demo Link](https://meals-2021.herokuapp.com/)
+
+## Getting Started
+NOTE: Make sure you have Node.js and npm or yarn installed in your PC.
+- Clone this repo: `git clone https://github.com/rukundoeric/Catalogue-of-Statistics.git`
+- Navigate into project directory: `cd catalogue-of-statistics`
+- Install all packages: `yarn install or npm install`
+- Start the app: `yarn start or npm start`
 
 ## Available Scripts
 
@@ -35,36 +55,31 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Rukundo Eric**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@githubhandle](https://github.com/rukundoeric)
+- Twitter: [@twitterhandle](https://twitter.com/rukundoeric005)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/rukundo-eric-000bba181/)
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](https://github.com/rukundoeric/Catalogue-of-Statistics/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- I would like to thank our code reviewer and anyone else who participated in making this done.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENCE) licensed.
